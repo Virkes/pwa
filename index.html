@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recorder</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <style type="text/css">
+    </style>
+</head>
+<body>
+
+    <h1>Recorder</h1>
+
+    <section class="main-controls">
+        <canvas class="visualizer"></canvas>
+        <div id="buttons">
+            <button class="record">Record</button>
+            <button class="stop">Stop</button>
+        </div>
+    </section>
+
+    <section class="sound-clips">
+
+    </section>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+    </script>
+    <script src="recorder.js"></script>
+</body>
+</html>
